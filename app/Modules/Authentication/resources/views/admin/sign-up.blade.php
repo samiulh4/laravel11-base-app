@@ -8,27 +8,40 @@
         alt="..." />
 @endsection
 @section('content')
-    {{ html()->form('POST', '/update-url')->open() }}
+    @include('partials.message')
+
+    {{ html()->form('POST', '/sign-up/store')->open() }}
 
     <label for="name" class="block text-sm">
         <span class="text-gray-700 dark:text-gray-400">Name</span>
         {{ html()->text('name')->id('name')->class(
                 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-            )->placeholder('Jane Doe') }}
+            )->placeholder('Jane Doe')->value(old('name')) }}
     </label>
+    @error('name')
+        <span class="text-red-600 text-sm">{{ $message }}</span>
+    @enderror
 
-    <label for="email" class="block mt-4 text-sm">
+    <label for="email" class="block text-sm mt-4">
         <span class="text-gray-700 dark:text-gray-400">Email</span>
         {{ html()->email('email')->id('email')->class(
                 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
-            )->placeholder('example@gmail.com') }}
+            )->placeholder('example@gmail.com')->value(old('email')) }}
     </label>
+    @error('email')
+        <span class="text-red-600 text-sm">{{ $message }}</span>
+    @enderror
+
     <label for="password" class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">Password</span>
         {{ html()->password('password')->id('password')->class(
                 'block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input',
             )->placeholder('***************') }}
     </label>
+    @error('password')
+        <span class="text-red-600 text-sm">{{ $message }}</span>
+    @enderror
+
     <label for="confirm_password" class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">Confirm password</span>
         {{ html()->password('confirm_password')->id('confirm_password')->class(
@@ -54,7 +67,7 @@
 
 @section('page')
     <p class="mt-4">
-        <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" href="./login.html">
+        <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" href="{{ url('/admin/sign-in') }}">
             Already have an account? Sign In
         </a>
     </p>
