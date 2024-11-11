@@ -5,19 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laravel Base App | Admin</title>
-    @include('LayoutAdmin::partials.style')
-    @include('LayoutAdmin::partials.alpine')
+    @include('partials.admin.style')
+    @include('partials.admin.alpine')
 </head>
 
 <body>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
         <!-- Desktop Sidebar -->
-        @include('LayoutAdmin::partials.sidebar-desktop')
+        @include('partials.admin.sidebar-desktop')
         <!-- Mobile sidebar -->
-        @include('LayoutAdmin::partials.sidebar-mobile')
+        @include('partials.admin.sidebar-mobile')
         <div class="flex flex-col flex-1">
             <!-- Header -->
-            @include('LayoutAdmin::partials.header')
+            @include('partials.admin.header')
             <main class="h-full pb-16 overflow-y-auto">
                 <!-- Remove everything INSIDE this div to a really blank page -->
                 <div class="container px-6 mx-auto grid">
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    @include('LayoutAdmin::partials.script')
+    @include('partials.admin.script')
 </body>
 
 </html>
