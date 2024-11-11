@@ -8,6 +8,6 @@ class AdminController
 {
     public function index()
     {
-        return view('LayoutAdmin::layouts.admin');
+        return view('Admin::pages.index');
     }
 }

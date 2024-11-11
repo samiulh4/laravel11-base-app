@@ -12,3 +12,5 @@ Route::group(['prefix' => '/admin'], function () {
 
 Route::post('/sign-up/store', [AuthenticationAdminController::class, 'signUpStore']);
 Route::post('/sign-in/action', [AuthenticationAdminController::class, 'signInAction']);
+Route::post('/sign-out', [AuthenticationAdminController::class, 'signOut'])->middleware('auth');
+

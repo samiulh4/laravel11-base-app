@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'Laravel Base App | Guest')</title>
-    @include('LayoutAdmin::partials.style')
-    @include('LayoutAdmin::partials.alpine')
+    @include('partials.admin.style')
+    @include('partials.admin.alpine')
 </head>
 
 <body>
