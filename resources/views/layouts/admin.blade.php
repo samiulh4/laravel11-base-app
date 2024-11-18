@@ -21,6 +21,7 @@
             <!-- Header -->
             @include('partials.admin.header')
             <main class="h-full pb-16 overflow-y-auto">
+                @include('partials.message')
                 @yield('content')
             </main>
         </div>
