@@ -85,4 +85,12 @@ class AuthenticationAdminController
             return redirect()->back()->withErrors(['error' => 'There was an error during login. Please try again later.']);
         }
     }
+
+    public function signOut()
+    {
+        Auth::logout(); // Logs out the user
+        request()->session()->invalidate(); // Invalidates the session
+        request()->session()->regenerateToken(); // Regenerates the CSRF token for security
+        return redirect('/admin/sign-in');
+    }
 }// End AuthenticationAdminController

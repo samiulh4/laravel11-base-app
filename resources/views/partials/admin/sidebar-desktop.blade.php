@@ -145,6 +145,7 @@
                     </ul>
                 </template>
             </li>
+            @include('partials.admin.menus.documents')
         </ul>
         <div class="px-6 my-6">
             <button
