@@ -17,5 +17,8 @@ class AppUser extends Model
             $user->updated_by = $user->id;
             $user->saveQuietly(); // Use saveQuietly to avoid triggering another save event
         });
+        static::saving(function ($user) {
+            $user->updated_by = $user->id; // Update the `updated_by` field during any save
+        });
     }
 }

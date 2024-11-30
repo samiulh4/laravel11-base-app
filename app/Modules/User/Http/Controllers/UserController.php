@@ -35,13 +35,13 @@ class UserController
 
         if ($request->hasFile('avatar')) {
             $avatarName = time() . '_' . uniqid() . '.' . $request->file('avatar')->getClientOriginalExtension();
-            $directory = public_path('uploads'.DIRECTORY_SEPARATOR.'avatar');
+            $directory = public_path('uploads'.DIRECTORY_SEPARATOR.'avatars');
             if (!is_dir($directory)) {
                 mkdir($directory, 0755, true);  // Create the directory with proper permissions
             }
             $avatarPath = $request->file('avatar')->move($directory, $avatarName);
            
-            $user->avatar = 'uploads'.DIRECTORY_SEPARATOR.'avatar'.DIRECTORY_SEPARATOR.$avatarName;
+            $user->avatar = 'uploads'.DIRECTORY_SEPARATOR.'avatars'.DIRECTORY_SEPARATOR.$avatarName;
         }
 
 

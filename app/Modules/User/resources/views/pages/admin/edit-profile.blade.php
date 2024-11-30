@@ -18,7 +18,7 @@
         </a>
 
         <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-            Edit My Profile
+            Edit My Profile ({{ $user->email }})
         </h4>
 
         {{ html()->form('POST', '/admin/user/save-my-profile')->attribute('enctype', 'multipart/form-data')->open() }}
