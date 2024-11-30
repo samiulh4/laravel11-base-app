@@ -31,7 +31,7 @@ class NotificationController
     public function adminChatIndex()
     {
         $chats = Chat::leftJoin('users', 'chats.created_by', '=', 'users.id')
-        ->select('chats.*', 'users.email')
+        ->select('chats.*', 'users.email', 'users.avatar')
         ->orderBy('id', 'desc')
         ->limit(10)
         ->get();
