@@ -64,7 +64,6 @@
             // Listening for broadcasted messages
             window.Echo.channel('event-public-chat')
                 .listen('EventPublicChat', (e) => {
-                    console.log(e);
                     // Append the received message to the chat box
                     const messageItem = document.createElement('div');
                     messageItem.classList.add('flex', 'items-start', 'space-x-3');
