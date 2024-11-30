@@ -51,6 +51,10 @@ function data() {
     toggleDocumentsMenu() {
       this.isDocumentsMenuOpen = !this.isDocumentsMenuOpen
     },
+    isNotificationMenuOpen: false,
+    toggleNotificationMenu() {
+      this.isNotificationMenuOpen = !this.isNotificationMenuOpen
+    },
     // Modal
     isModalOpen: false,
     trapCleanup: null,
