@@ -31,10 +31,10 @@ class NotificationController
     public function adminChatIndex()
     {
         $chats = Chat::leftJoin('users', 'chats.created_by', '=', 'users.id')
-        ->select('chats.*', 'users.email')
-        ->orderBy('id', 'desc')
-        ->limit(10)
-        ->get();
+            ->select('chats.*', 'users.email')
+            ->orderBy('id', 'desc')
+            ->limit(10)
+            ->get();
         return view("Notification::admin.chat.index", compact('chats'));
     }
 
@@ -63,7 +63,55 @@ class NotificationController
         $chat->save();
 
         event(new EventPublicChat($chat, Auth::user()->email));
-        
-        return response()->json(['success' => true, 'message'=> 'Data Save Successpully', 'data' => $chat]);
+
+        return response()->json(['success' => true, 'message' => 'Data Save Successpully', 'data' => $chat]);
     }
+
+    public function testSocket()
+    {
+        // $host = '127.0.0.1';
+        // $port = 9999;
+    
+        // // Create a new socket
+        // $socket = socket_create(AF_INET, SOCK_STREAM, 0);
+        // if ($socket === false) {
+        //     $errorCode = socket_last_error();
+        //     $errorMessage = socket_strerror($errorCode);
+        //     die("Error creating socket: $errorMessage\n");
+        // }
+    
+        // // Connect to the server
+        // if (!@socket_connect($socket, $host, $port)) {
+        //     $errorCode = socket_last_error($socket);
+        //     $errorMessage = socket_strerror($errorCode);
+        //     die("Error connecting to server: $errorMessage\n");
+        // }
+        // $data = [
+        //     'message' => 'I love my country i love my land green bangladesh my home land',
+        //     'email' => 'samiulh4@gmail.com'
+        // ];
+
+        // // Write data to the server
+        // if (!@socket_write($socket, json_encode($data))) {
+        //     $errorCode = socket_last_error($socket);
+        //     $errorMessage = socket_strerror($errorCode);
+        //     die("Error writing to server: $errorMessage\n");
+        // }
+    
+        // // Read data from the server
+        // $data = @socket_read($socket, 1024);
+        // if ($data === false) {
+        //     $errorCode = socket_last_error($socket);
+        //     $errorMessage = socket_strerror($errorCode);
+        //     die("Error reading from server: $errorMessage\n");
+        // }
+    
+        // echo "Received from server: $data\n";
+    
+        // // Close the connection
+        // socket_close($socket);
+
+        return view("Notification::admin.chat.socket");
+    }
+    
 }
