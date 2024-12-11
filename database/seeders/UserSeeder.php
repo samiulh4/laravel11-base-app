@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $data = [];
-        $sourcePath = public_path('assets/img/users');
+        $sourcePath = public_path('assets/img/avatars');
         $destinationPath = public_path('uploads/avatars');
 
         // Ensure the destination folder exists
@@ -31,9 +31,9 @@ class UserSeeder extends Seeder
             'Nusraat Faria Mazhar' => ['female', '05.jpg'],
             'Jason Statham' => ['male', '06.jpg'],
             'Robert Downey Jr.' => ['male', '07.jpg'],
-            'Dwayne Johnson' => ['male', '08.jpg'],
-            'Chris Hemsworth' => ['male', '09.jpg'],
-            'Tobey Maguire' => ['male', '10.jpg'],
+            'Dwayne Johnson' => ['male', '01.jpg'],
+            'Chris Hemsworth' => ['male', '02.jpg'],
+            'Tobey Maguire' => ['male', '03.jpg'],
         ];
 
         // Get the names and genders as separate arrays
