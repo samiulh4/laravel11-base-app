@@ -2,6 +2,8 @@
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
 
 <head>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ asset('assets/img/logos/512.png') }}" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSRF Token -->

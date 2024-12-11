@@ -45,3 +45,6 @@ composer require pusher/pusher-php-server
 npm install --save-dev laravel-echo pusher-js
 
 php artisan db:seed --class=UserSeeder
+
+# Make a module
+`php artisan make:module Web`

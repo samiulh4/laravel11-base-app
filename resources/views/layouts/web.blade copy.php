@@ -20,7 +20,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- title -->
-    <title>@yield('title', 'Laravel Base App | Web')</title>
+    <title>Pinwheel-tailwind</title>
 
     <!-- noindex robots -->
     <meta name="robots" content="" />
@@ -49,19 +49,22 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     @include('partials.web.style')
-    @stack('css')
-    @yield('styles')
 </head>
 
 <body>
     @include('partials.web.navbar')
     {{-- @include('partials.web.floating') --}}
-    @yield('hero')
-    @yield('content')
+    @include('partials.web.hero')
+
+    <section class="section pt-0">
+        <div class="container">
+            @include('partials.web.featured-posts-1')
+            @include('partials.web.featured-posts-2')
+        </div>
+    </section>
+
     @include('partials.web.footer')
     @include('partials.web.script')
-    @stack('js')
-    @yield('scripts')
 </body>
 
 </html>
