@@ -98,7 +98,7 @@
                     <ul id="profile-dropdown-menu-web"
                         class="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-md ring-1 ring-black ring-opacity-5 hidden group-hover:block">
                         <li class="border-b border-gray-200">
-                            <a href="profile.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Profile</a>
+                            <a href="{{ url('/user/profile') }}" class="block px-4 py-2 text-sm hover:bg-gray-100">Profile</a>
                         </li>
                         <li class="border-b border-gray-200">
                             <a href="settings.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Settings</a>
