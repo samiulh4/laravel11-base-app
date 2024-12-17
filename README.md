@@ -48,3 +48,5 @@ php artisan db:seed --class=UserSeeder
 
 # Make a module
 `php artisan make:module Web`
+
+https://lostandfoundnetworks.com/
