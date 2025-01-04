@@ -58,7 +58,6 @@ class AuthenticationAdminController
 
     public function signInAction(Request $request)
     {
-        // Validate incoming request
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|string|min:8',

@@ -1,12 +1,7 @@
 <header class="header">
     <nav class="navbar container">
         <!-- logo -->
-        <div class="order-0">
-            <a href="index.html">
-                <img src="{{ asset('assets/img/logos/512.png') }}" height="30" width="147" alt="logo"
-                    style="height:40px;width:80px;" />
-            </a>
-        </div>
+        @include('partials.web.external-yield.logo')
         <!-- navbar toggler -->
         <input id="nav-toggle" type="checkbox" class="hidden" />
         <label id="show-button" for="nav-toggle" class="order-1 flex cursor-pointer items-center lg:order-1 lg:hidden">
@@ -29,7 +24,7 @@
                 <a href="" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
-                <a href="about.html" class="nav-link">About</a>
+                <a href="{{ url('/lost-and-found') }}" class="nav-link">Lost & Found</a>
             </li>
             <li class="nav-item">
                 <a href="blog.html" class="nav-link">Blog</a>

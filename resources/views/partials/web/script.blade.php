@@ -10,18 +10,19 @@
      document.addEventListener('DOMContentLoaded', () => {
          const profileDropdownToggleWeb = document.getElementById('profile-dropdown-toggle-web');
          const profileDropdownMenuWeb = document.getElementById('profile-dropdown-menu-web');
-
-         profileDropdownToggleWeb.addEventListener('click', (event) => {
-             event.stopPropagation(); // Prevent click from bubbling up
-             profileDropdownMenuWeb.classList.toggle('hidden');
-         });
-
-         // Close dropdown when clicking outside
-         document.addEventListener('click', (event) => {
-             if (!profileDropdownMenuWeb.contains(event.target) && !profileDropdownToggleWeb.contains(
-                     event.target)) {
-                 profileDropdownMenuWeb.classList.add('hidden');
-             }
-         });
+         if (profileDropdownToggleWeb && profileDropdownMenuWeb) {
+             profileDropdownToggleWeb.addEventListener('click', (event) => {
+                 event.stopPropagation(); // Prevent click from bubbling up
+                 profileDropdownMenuWeb.classList.toggle('hidden');
+             });
+             // Close dropdown when clicking outside
+             document.addEventListener('click', (event) => {
+                 if (!profileDropdownMenuWeb.contains(event.target) && !profileDropdownToggleWeb
+                     .contains(
+                         event.target)) {
+                     profileDropdownMenuWeb.classList.add('hidden');
+                 }
+             });
+         }
      });
  </script>

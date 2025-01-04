@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/img/logos/512.png') }}" />
+    @include('partials.web.external-yield.favicon')
     <!-- theme meta -->
     <meta name="theme-name" content="LaravelWeb" />
     <meta name="msapplication-TileColor" content="#000000" />
@@ -57,6 +57,7 @@
     @include('partials.web.navbar')
     {{-- @include('partials.web.floating') --}}
     @yield('hero')
+    @include('partials.message')
     @yield('content')
     @include('partials.web.footer')
     @include('partials.web.script')

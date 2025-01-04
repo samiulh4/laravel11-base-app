@@ -50,3 +50,6 @@ php artisan db:seed --class=UserSeeder
 `php artisan make:module Web`
 
 https://lostandfoundnetworks.com/
+
+onerror="this.src=`{{ asset('assets/img/default/no-image-available.png') }}`"
+php artisan db:seed --class=AreasSeeder
