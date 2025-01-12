@@ -5,6 +5,9 @@ namespace App\Modules\LostAndFound\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Modules\LostAndFound\Models\LostAndFoundCategory;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+use App\Libraries\DataFunction;
 
 class LostAndFoundWebController
 {
@@ -16,8 +19,11 @@ class LostAndFoundWebController
 
     public function postCreate()
     {
-        $lostAndFoundTypes = ['Lost' => 'Lost', 'Found' => 'Found'];
-        $lostAndFoundCategory = LostAndFoundCategory::where('is_active', 1)->pluck('name', 'id');
-        return view("LostAndFound::web.pages.post-create", compact('lostAndFoundTypes', 'lostAndFoundCategory'));
+        $data = [];
+        $data['lostAndFoundTypes'] = ['Lost' => 'Lost', 'Found' => 'Found'];
+        $data['lostAndFoundCategory'] = DataFunction::getLostAndFoundCategoryList();
+        $data['countryList'] = DataFunction::getCountryList();
+        $data['authUser'] = Auth::user();
+        return view("LostAndFound::web.pages.post-create", $data);
     }
 }

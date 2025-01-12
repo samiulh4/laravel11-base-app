@@ -23,18 +23,33 @@
                     </div>
                     <div class="form-group mb-5">
                         {{ html()->label('Country')->for('lost_and_found_country_id')->class('form-label') }}
-                        {{ html()->select('lost_and_found_country_id', $lostAndFoundTypes, null)->class('form-select')->id('lost_and_found_country_id')->placeholder('Select Country')->required() }}
+                        {{ html()->select('lost_and_found_country_id', $countryList, null)->class('form-select')->id('lost_and_found_country_id')->placeholder('Select Country')->required() }}
+                    </div>
+                    <div class="form-group mb-5">
+                        {{ html()->label('Contact Email')->for('lost_and_found_contact_email')->class('form-label') }}
+                        {{ html()->text('lost_and_found_contact_email')->value($authUser->email)->class('form-control')->id('lost_and_found_contact_email')->placeholder('Enter Contact Email')->required() }}
+                    </div>
+                    <div class="form-group mb-5">
+                        {{ html()->label('Contact Mobile No.')->for('lost_and_found_contact_mobile')->class('form-label') }}
+                        {{ html()->text('lost_and_found_contact_mobile')->class('form-control')->id('lost_and_found_contact_mobile')->placeholder('Enter Contact Mobile No.')->required() }}
+                    </div>
+                    <div class="form-group mb-5">
+                        {{ html()->label('Contact Telephone No.')->for('lost_and_found_contact_telephone')->class('form-label') }}
+                        {{ html()->text('lost_and_found_contact_telephone')->class('form-control')->id('lost_and_found_contact_telephone')->placeholder('Enter Contact Telephone No.') }}
+                    </div>
+                    <div class="form-group mb-5">
+                        {{ html()->label('Contact Address')->for('lost_and_found_contact_address')->class('form-label') }}
+                        {{ html()->text('lost_and_found_contact_address')->class('form-control')->id('lost_and_found_contact_address')->placeholder('Enter Contact Address') }}
                     </div>
                 </div>
                 <div class="md:col-6 md:order-2">
-
                     <div class="form-group mb-5">
-                        <label class="form-label" for="name">Full Name</label>
-                        <input class="form-control" type="text" id="name" placeholder="Your Full Name" />
+                        {{ html()->label('Title')->for('lost_and_found_title')->class('form-label') }}
+                        {{ html()->text('lost_and_found_title')->class('form-control')->id('lost_and_found_title')->placeholder('Enter Title')->required() }}
                     </div>
                     <div class="form-group mb-5">
-                        <label class="form-label" for="eamil">Email Adrdess</label>
-                        <input class="form-control" type="text" id="email" placeholder="Your  Email Address" />
+                        {{ html()->label('Description')->for('lost_and_found_description')->class('form-label') }}
+                        {{ html()->textarea('lost_and_found_description')->class('form-control')->id('lost_and_found_description')->placeholder('Enter Description')->required()->attributes(['rows' => 10, 'cols' => 30]) }}
                     </div>
                     <div class="form-group mb-5">
                         <label class="form-label" for="reason">reason/purpose</label>
