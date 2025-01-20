@@ -4,8 +4,8 @@
     Admin Sign In
 @endsection
 @section('cover')
-    <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="{{ asset('assets/img/cover/sign-in.jpg') }}"
-        alt="..." />
+    <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="{{ asset('assets/img/covers/sign-in.jpg') }}"
+        alt="..." onerror="this.src=`{{ asset('assets/img/default/no-image-available.png') }}`" />
 @endsection
 @section('content')
     @include('partials.message')
@@ -49,7 +49,8 @@
         </a>
     </p>
     <p class="mt-1">
-        <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" href="{{ url('/admin/sign-up') }}">
+        <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
+            href="{{ url('/admin/sign-up') }}">
             Create account
         </a>
     </p>

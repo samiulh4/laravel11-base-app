@@ -46,7 +46,7 @@
                 <!-- Fixed image size for preview -->
                 <div class="bg-sky-300">
                     <img id="avatar-preview" class="object-cover" src="{{ asset(auth()->user()->avatar) }}"
-                        alt="Avatar Preview">
+                        alt="Avatar Preview"/>
                 </div>
             </div>
             {{ html()->span('Your password is too short.')->class('text-xs text-red-600 dark:text-red-400') }}

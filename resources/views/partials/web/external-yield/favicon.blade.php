@@ -1,0 +1,1 @@
+<link rel="shortcut icon" href="@yield('favicon', asset('assets/img/logos/512.png'))" />
