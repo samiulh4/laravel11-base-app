@@ -52,4 +52,6 @@ php artisan db:seed --class=UserSeeder
 https://lostandfoundnetworks.com/
 
 onerror="this.src=`{{ asset('assets/img/default/no-image-available.png') }}`"
+<i class="fa-solid fa-earth-americas"></i>
 php artisan db:seed --class=AreasSeeder
+assets/img/default/default-image.jpg

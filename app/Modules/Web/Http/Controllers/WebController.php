@@ -17,9 +17,9 @@ class WebController
 
     public function generate()
     {
-        $encoded = EncryptionFunction::encodeId('5');
-        $decoded = EncryptionFunction::decodeId($encoded);
-        dd($encoded, $decoded);
+        // $encoded = EncryptionFunction::encodeId("");
+        // $decoded = EncryptionFunction::decodeId($encoded);
+        // dd($encoded, $decoded);
     
         //$filePath = public_path('uploads/areas/countries_001.json');
         /* if (file_exists($filePath)) {

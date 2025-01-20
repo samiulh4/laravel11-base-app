@@ -57,7 +57,7 @@
     @include('partials.web.navbar')
     {{-- @include('partials.web.floating') --}}
     @yield('hero')
-    @include('partials.message')
+    @include('partials.web.message')
     @yield('content')
     @include('partials.web.footer')
     @include('partials.web.script')

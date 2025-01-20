@@ -4,6 +4,9 @@
  <script src="{{ asset('assets/web/plugins/swiper/swiper-bundle.js') }}"></script>
  <script src="{{ asset('assets/web/plugins/shufflejs/shuffle.js') }}"></script>
 
+ <!-- Fontawesome -->
+ <script src="{{ asset('assets/plugins/fontawesome-6.7.2/js/all.min.js') }}"></script>
+
  <!-- Main Script -->
  <script src="{{ asset('assets/web/scripts/main.js') }}"></script>
  <script type="text/javascript">

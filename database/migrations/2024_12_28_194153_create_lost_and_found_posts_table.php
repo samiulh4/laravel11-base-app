@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('lost_and_found_posts', function (Blueprint $table) {
             $table->id();
             $table->string('lost_and_found_title', 256);
+            $table->string('lost_and_found_slug', 256);
             $table->text('lost_and_found_description');
             $table->bigInteger('lost_and_found_country_id')->unsigned();
             $table->bigInteger('lost_and_found_category_id')->unsigned();
@@ -31,7 +32,7 @@ return new class extends Migration
             $table->string('lost_and_found_cover', 256);
             $table->tinyInteger('is_active')->unsigned()->default(0);
             $table->bigInteger('created_by')->unsigned()->nullable();
-            $table->bigInteger('updated_id')->unsigned()->nullable();
+            $table->bigInteger('updated_by')->unsigned()->nullable();
             $table->timestamps();
         });
     }

@@ -11,9 +11,10 @@
 <link rel="stylesheet" href="{{ asset('assets/web/plugins/swiper/swiper-bundle.css') }}" />
 
 <!-- Fontawesome -->
-<link rel="stylesheet" href="{{ asset('assets/web/plugins/font-awesome/v6/brands.css') }}" />
+{{-- <link rel="stylesheet" href="{{ asset('assets/web/plugins/font-awesome/v6/brands.css') }}" />
 <link rel="stylesheet" href="{{ asset('assets/web/plugins/font-awesome/v6/solid.css') }}" />
-<link rel="stylesheet" href="{{ asset('assets/web/plugins/font-awesome/v6/fontawesome.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/web/plugins/font-awesome/v6/fontawesome.css') }}" /> --}}
+<link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-6.7.2/css/all.min.css') }}" />
 
 <!-- Main Stylesheet -->
 <link href="{{ asset('assets/web/styles/main.css') }}" rel="stylesheet" />
