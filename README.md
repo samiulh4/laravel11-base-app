@@ -49,7 +49,7 @@ php artisan db:seed --class=UserSeeder
 # Make a module
 `php artisan make:module Web`
 
-https://lostandfoundnetworks.com/
+
 
 onerror="this.src=`{{ asset('assets/img/default/no-image-available.png') }}`"
 <i class="fa-solid fa-earth-americas"></i>

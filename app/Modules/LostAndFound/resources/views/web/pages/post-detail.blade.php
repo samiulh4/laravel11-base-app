@@ -5,7 +5,7 @@
 
 
 @section('styles')
-<link rel="stylesheet" href="{{ asset('assets/plugins/leaflet/leaflet.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/plugins/leaflet/leaflet.css') }}" />
     <style>
 
     </style>
@@ -58,7 +58,7 @@
                         </p>
                         <h5 class="h5">Description</h5>
                         <p class="text-dark">
-                            {{ $post->lost_and_found_description }}
+                            {!! nl2br(e($post->lost_and_found_description)) !!}
                         </p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             </li>
                             <li class="my-1 inline-flex items-center">
                                 <a class="inline-flex items-center font-semibold text-blue-500 hover:text-blue-700"
-                                    href="#">
+                                    href="{{ url('/lost-and-found/post/edit/'.$encodeId) }}">
                                     <i class="fa-solid fa-pen-to-square"></i>&nbsp;Edit
                                 </a>
                             </li>
@@ -128,7 +128,7 @@
 @endsection
 @section('scripts')
     <script src="{{ asset('assets/plugins/leaflet/leaflet.js') }}"></script>
-    <script>
+    <script type="text/javascript">
         // Creating map options with a higher zoom level
         var mapOptions = {
             center: [17.385044, 78.486671], // Latitude and Longitude for Hyderabad, India
@@ -149,9 +149,6 @@
 
         // Optionally, adding a popup to the marker
         marker.bindPopup("<b>Hyderabad</b><br>Marker Example").openPopup();
-    </script>
-
-    <script type="text/javascript">
         $(document).ready(function() {
 
         });
