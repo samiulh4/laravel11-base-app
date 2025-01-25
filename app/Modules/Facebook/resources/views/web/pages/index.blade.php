@@ -282,19 +282,19 @@
         <i class="fas fa-comments"></i>
     </button>
     <!-- Chat Sidebar -->
-<div id="chatSidebar" class="chat-sidebar hidden">
-    <h3>Contacts</h3>
-    <ul>
-        <li data-chat="1" class="hover:bg-gray-200 cursor-pointer">
-            <img src="{{ asset(auth()->user()->avatar) }}" alt="Friend 1">
-            <span>Friend 1</span>
-        </li>
-        <li data-chat="2" class="hover:bg-gray-200 cursor-pointer">
-            <img src="{{ asset(auth()->user()->avatar) }}" alt="Friend 2">
-            <span>Friend 2</span>
-        </li>
-    </ul>
-</div>
+    <div id="chatSidebar" class="chat-sidebar hidden">
+        <h3>Contacts</h3>
+        <ul>
+            <li data-chat="1" class="hover:bg-gray-200 cursor-pointer">
+                <img src="{{ asset(auth()->user()->avatar) }}" alt="Friend 1">
+                <span>Friend 1</span>
+            </li>
+            <li data-chat="2" class="hover:bg-gray-200 cursor-pointer">
+                <img src="{{ asset(auth()->user()->avatar) }}" alt="Friend 2">
+                <span>Friend 2</span>
+            </li>
+        </ul>
+    </div>
 
     <!-- Chat Windows -->
     <div id="chatWindow1" class="chat-window">
@@ -381,7 +381,7 @@
     <script>
         const toggleChatSidebarBtn = document.getElementById('toggleChatSidebar');
         const chatSidebar = document.getElementById('chatSidebar');
-    
+
         toggleChatSidebarBtn.addEventListener('click', () => {
             chatSidebar.classList.toggle('hidden');
             chatSidebar.classList.toggle('active');

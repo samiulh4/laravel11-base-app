@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Modules\Facebook\Http\Controllers\FacebookWebController;
+use App\Modules\Facebook\Http\Controllers\FacebookController;
 
 // Auth Route
 Route::group(['prefix' => '/facebook', 'middleware'=> ['auth']], function () {
-    Route::get('/', [FacebookWebController::class, 'index']);
+    Route::get('/', [FacebookController::class, 'index']);
 });
