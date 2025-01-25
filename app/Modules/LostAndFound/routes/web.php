@@ -11,5 +11,7 @@ Route::group(['prefix' => '/lost-and-found'], function () {
 // With Auth
 Route::group(['prefix' => '/lost-and-found', 'middleware'=> ['auth']], function () {
     Route::get('/post/create', [LostAndFoundWebController::class, 'postCreate']);
+    Route::get('/post/edit/{encodeId}', [LostAndFoundWebController::class, 'postEdit']);
     Route::post('/post/store', [LostAndFoundWebController::class, 'postStore']);
+    Route::put('/post/update/{encodeId}', [LostAndFoundWebController::class, 'postUpdate']);
 });

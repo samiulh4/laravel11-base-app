@@ -21,11 +21,12 @@ class DataFunction
                     ->where('area_type_code', 'country')
                     ->pluck('area_name_full', 'id');
                 // Encode IDs before returning the result
-                return $countries->mapWithKeys(function ($area_name_full, $id) {
+                /*return $countries->mapWithKeys(function ($area_name_full, $id) {
                     return [
                         EncryptionFunction::encodeId($id) => $area_name_full
                     ];
-                });
+                });*/
+                return $countries;
             });
         } catch (Exception $e) {
             Log::error('Error occurred : [DAFN-1001]', [
@@ -46,11 +47,12 @@ class DataFunction
                 $categories = DB::table('lost_and_found_categories')
                     ->where('is_active', 1)
                     ->pluck('name', 'id');
-                return $categories->mapWithKeys(function ($name, $id) {
+                /*return $categories->mapWithKeys(function ($name, $id) {
                     return [
                         EncryptionFunction::encodeId($id) => $name
                     ];
-                });
+                });*/
+                return $categories;
             });
         } catch (Exception $e) {
             Log::error('Error occurred : [DAFN-1002]', [
