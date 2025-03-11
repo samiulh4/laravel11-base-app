@@ -2,15 +2,15 @@
 
 namespace App\Modules\Facebook\Http\Controllers;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class FacebookController
 {
 
     
-    public function index()
+    public function index() : View
     {
-        // return view("layouts.facebook");
-        return view("Facebook::layouts.master");
+        return view("Facebook::pages.web.index");
     }
 }

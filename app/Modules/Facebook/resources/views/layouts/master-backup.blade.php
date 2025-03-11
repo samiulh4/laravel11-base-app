@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook-like Homepage</title>
+    <title>Laravel Base App | Facebook</title>
     @include('Facebook::partials.style')
 </head>
 
@@ -26,7 +26,7 @@
 
             <!-- Create Post -->
             @include('Facebook::partials.create-post')
-            
+
             <!-- Posts Section -->
             @include('Facebook::partials.posts')
         </div>
