@@ -1,6 +1,147 @@
 <link rel="stylesheet" href="{{ asset('assets/plugins/tailwind/tailwind.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-6.7.2/css/all.min.css') }}" />
 <style>
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansRegular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansBold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansBoldItalic.ttf') format('truetype');
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansHairline.ttf') format('truetype');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansHairlineItalic.ttf') format('truetype');
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansHeavy.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansHeavyItalic.ttf') format('truetype');
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansItalic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansLight.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookSansLightItalic.ttf') format('truetype');
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'facebook-sans';
+        src: url('/assets/fonts/facebook_sans/FacebookNarrowAppRegular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Alfa Slab One Font */
+    @font-face {
+        font-family: 'alfa-slab-one';
+        src: url('/assets/fonts/alfa_slab_one/AlfaSlabOne-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Zilla Slab Highlight Fonts */
+    @font-face {
+        font-family: 'zilla-slab-highlight';
+        src: url('/assets/fonts/zilla_slab_highlight/ZillaSlabHighlight-Regular.ttf') format('truetype');
+        font-weight: 400;
+        /* Regular */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'zilla-slab-highlight';
+        src: url('/assets/fonts/zilla_slab_highlight/ZillaSlabHighlight-Bold.ttf') format('truetype');
+        font-weight: 700;
+        /* Bold */
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'facebook-sans', sans-serif;
+    }
+
+    h1 {
+        font-family: 'facebook-sans';
+        font-weight: 900;
+        /* Heavy */
+    }
+
+    h2 {
+        font-family: 'facebook-sans';
+        font-weight: 700;
+        /* Bold */
+    }
+
+    p.light {
+        font-family: 'facebook-sans';
+        font-weight: 300;
+        /* Light */
+    }
+
+    span.italic {
+        font-family: 'facebook-sans';
+        font-style: italic;
+    }
+
+    button {
+        font-family: 'facebook-sans';
+        font-weight: 400;
+        /* Regular */
+    }
+
+    /* .fb_brand_title {
+        font-family: 'alfa-slab-one', serif;
+        text-transform: uppercase;
+    } */
+
+
     /* Start -:- Facebook Chat Sidebar */
     .facebook_chat_sidebar.active {
         transform: translateX(0);
